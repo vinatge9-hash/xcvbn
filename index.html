@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Niyantri Dog Care | Home</title>
+  <meta name='description' content='Warm, modern dog care by Niyantri Dog Care. Grooming, spa, health care and more in Hyderabad.' />
+  <!-- Tailwind CSS (CDN) -->
+  <script src='https://cdn.tailwindcss.com'></script>
+  <!-- Swiper (for image carousel) -->
+  <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css' />
+  <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+  <!-- Placeholder Font (each section can apply its own font) -->
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap' rel='stylesheet'>
+  <style>
+    .custom-font { font-family: 'Inter', system-ui, -apple-system, Arial; }
+  </style>
+</head>
+<body class='min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-blue-50 text-gray-800 custom-font'>
+  <!-- Shared Header -->
+  <header class='bg-white/70 backdrop-blur-md sticky top-0 z-50 shadow-md'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div class='flex items-center justify-between h-16'>
+        <div class='flex items-center'>
+          <a href='index.html' class='flex items-center space-x-2'>
+            <!-- Logo (inline SVG) -->
+            <svg width='28' height='28' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M4 14s3-7 8-7 8 7 8 7-3 7-8 7-8-7-8-7z' stroke='#f59e0b' stroke-width='2' fill='none'/>
+              <circle cx='12' cy='13' r='3' fill='#3b82f6'/>
+            </svg>
+            <span class='text-xl font-semibold'>Niyantri Dog Care</span>
+          </a>
+        </div>
+        <nav class='hidden md:flex space-x-6'>
+          <a href='index.html' class='hover:text-orange-600'>Home</a>
+          <a href='services.html' class='hover:text-orange-600'>Services</a>
+          <a href='cart.html' id='nav-cart' class='hover:text-orange-600'>Cart (<span id='cart-count'>0</span>)</a>
+          <a href='about.html' class='hover:text-orange-600'>About</a>
+          <a href='contact.html' class='hover:text-orange-600'>Contact</a>
+        </nav>
+        <div class='md:hidden'>
+          <button id='mobileMenuBtn' class='p-2 rounded-md bg-yellow-100 hover:bg-yellow-200'>
+            <svg width='20' height='20' viewBox='0 0 20 20' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M2 6h16v2H2V6zm0 4h16v2H2v-2zm0 6h16v-2H2v2z'/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id='mobileMenu' class='hidden md:hidden bg-white/90 border-t border-gray-200'>
+      <a href='index.html' class='block px-4 py-2'>Home</a>
+      <a href='services.html' class='block px-4 py-2'>Services</a>
+      <a href='cart.html' class='block px-4 py-2'>Cart (<span id='cart-count-mobile'>0</span>)</a>
+      <a href='about.html' class='block px-4 py-2'>About</a>
+      <a href='contact.html' class='block px-4 py-2'>Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class='pt-8 pb-14'>
+    <section class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div class='grid md:grid-cols-2 gap-10 items-center'>
+        <div>
+          <h1 class='text-4xl md:text-5xl font-extrabold text-blue-900 mb-4'>Caring for your furry family with warmth and expertise</h1>
+          <p class='text-lg text-gray-700 mb-6'>Niyantri Dog Care offers premium grooming, spa, and health services in Jubilee Hills, Hyderabad. Beautifully designed for comfort and well-being.</p>
+          <div class='flex flex-wrap gap-4'>
+            <a href='contact.html' class='px-6 py-3 bg-orange-500 text-white rounded-full shadow hover:bg-orange-600 transition'>Book a Service</a>
+            <a href='services.html' class='px-6 py-3 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition'>View Services</a>
+          </div>
+        </div>
+        <div class='relative'>
+          <!-- Image carousel via Swiper -->
+          <div class='swiper-container rounded-xl shadow-xl'>
+            <div class='swiper-wrapper'>
+              <div class='swiper-slide'>
+                <img src="https://images.pexels.com/photos/9502081/pexels-photo-9502081.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt='Grooming station' class='w-full h-72 object-cover rounded-t-xl'>
+              </div>
+              <div class='swiper-slide'>
+                <img src="https://images.unsplash.com/photo-1744075019071-d6604a08d407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwzfHxDbG9zZS11cCUyMG9mJTIwYSUyMGdyb29tZWQlMjBkb2clMjB3aXRoJTIwYSUyMGJsdWUlMjBib3d8ZW58MHwwfHx8MTc1NjgxNDc5M3ww&ixlib=rb-4.1.0&q=80&w=1080" alt='Groomed dog' class='w-full h-72 object-cover rounded-t-xl'>
+              </div>
+              <div class='swiper-slide'>
+                <img src="https://images.pexels.com/photos/6187839/pexels-photo-6187839.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt='Dog spa' class='w-full h-72 object-cover rounded-t-xl'>
+              </div>
+            </div>
+            <div class='swiper-pagination'></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services snapshot -->
+    <section class='mt-12'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-2xl font-semibold mb-4'>Our Services</h2>
+        <div class='grid md:grid-cols-4 gap-6'>
+          <!-- Service Card 1 -->
+          <div class='bg-white/70 backdrop-blur-md rounded-xl shadow-md p-4 hover:shadow-xl transition'>
+            <div class='h-28 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-md flex items-center justify-center'>
+              <span class='text-3xl'>🛁</span>
+            </div>
+            <h3 class='mt-3 text-lg font-semibold'>Bath & Basic Groom</h3>
+            <p class='text-sm text-gray-600'>Gentle bath, drying & basic trim.</p>
+            <button onclick="addToCart('svc-bath','Bath & Basic Groom',299)" class='mt-3 w-full px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart ₹299</button>
+          </div>
+          <!-- Service Card 2 -->
+          <div class='bg-white/70 backdrop-blur-md rounded-xl shadow-md p-4 hover:shadow-xl transition'>
+            <div class='h-28 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-md flex items-center justify-center'>
+              <span class='text-3xl'>🧼</span>
+            </div>
+            <h3 class='mt-3 text-lg font-semibold'>Deluxe Groom</h3>
+            <p class='text-sm text-gray-600'>A refined cut with precise styling.</p>
+            <button onclick="addToCart('svc-deluxe','Deluxe Groom',799)" class='mt-3 w-full px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart ₹799</button>
+          </div>
+          <!-- Service Card 3 -->
+          <div class='bg-white/70 backdrop-blur-md rounded-xl shadow-md p-4 hover:shadow-xl transition'>
+            <div class='h-28 bg-gradient-to-br from-pink-100 to-violet-100 rounded-md flex items-center justify-center'>
+              <span class='text-3xl'>💆</span>
+            </div>
+            <h3 class='mt-3 text-lg font-semibold'>Spa & Relax</h3>
+            <p class='text-sm text-gray-600'>Hydro-massage, aromatherapy & more.</p>
+            <button onclick="addToCart('svc-spa','Spa & Relax',1499)" class='mt-3 w-full px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart ₹1499</button>
+          </div>
+          <!-- Service Card 4 -->
+          <div class='bg-white/70 backdrop-blur-md rounded-xl shadow-md p-4 hover:shadow-xl transition'>
+            <div class='h-28 bg-gradient-to-br from-green-100 to-teal-100 rounded-md flex items-center justify-center'>
+              <span class='text-3xl'>🩺</span>
+            </div>
+            <h3 class='mt-3 text-lg font-semibold'>Health & Check</h3>
+            <p class='text-sm text-gray-600'>Wellness check & preventive care.</p>
+            <button onclick="addToCart('svc-health','Health & Check',999)" class='mt-3 w-full px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart ₹999</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class='mt-12'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-2xl font-semibold mb-4'>What Our Clients Say</h2>
+        <div class='swiper-container testimonials rounded-xl shadow-md'>
+          <div class='swiper-wrapper'>
+            <div class='swiper-slide p-6'>
+              <blockquote class='text-gray-700'>“My labrador loved the spa day. Great care and friendly staff.”</blockquote>
+              <cite class='block mt-2 text-sm font-semibold'>- Priya S., Jubilee Hills</cite>
+            </div>
+            <div class='swiper-slide p-6'>
+              <blockquote class='text-gray-700'>“Excellent grooming with a calm and clean facility.”</blockquote>
+              <cite class='block mt-2 text-sm font-semibold'>- Anand K., Punjagutta</cite>
+            </div>
+            <div class='swiper-slide p-6'>
+              <blockquote class='text-gray-700'>“Affordable and professional service every time.”</blockquote>
+              <cite class='block mt-2 text-sm font-semibold'>- Meera R., Banjara Hills</cite>
+            </div>
+          </div>
+          <div class='swiper-pagination'></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class='bg-gray-900 text-white mt-12'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid md:grid-cols-3 gap-8'>
+      <div>
+        <h4 class='font-semibold mb-2'>Niyantri Dog Care</h4>
+        <p class='text-sm text-gray-300'>Premium dog grooming and care in Jubilee Hills, Hyderabad.</p>
+      </div>
+      <div>
+        <h4 class='font-semibold mb-2'>Locations</h4>
+        <p class='text-sm text-gray-300'>Jubilee Hills, Hyderabad</p>
+      </div>
+      <div>
+        <h4 class='font-semibold mb-2'>Contact</h4>
+        <p class='text-sm text-gray-300'>Email: care@niyantri.dog</p>
+      </div>
+    </div>
+    <div class='bg-black/40 text-center py-4'>
+      <span class='text-sm text-gray-300'>&copy; 2025 Niyantri Dog Care</span>
+    </div>
+  </footer>
+
+  <!-- Global Script (Cart & UI) -->
+  <script>
+    // Cart utilities (shared across pages)
+    function getCart() { try { return JSON.parse(localStorage.getItem('shoppingCart')) || []; } catch(e) { return []; } }
+    function saveCart(cart) { localStorage.setItem('shoppingCart', JSON.stringify(cart)); updateCartCount(); }
+    function addToCart(itemId, itemName, itemPrice) {
+      const cart = getCart();
+      const existing = cart.find(i => i.id === itemId);
+      if (existing) { existing.quantity += 1; } else { cart.push({ id: itemId, name: itemName, price: Number(itemPrice), quantity: 1 }); }
+      saveCart(cart);
+      // gentle notification
+      const msg = itemName + ' has been added to your cart.';
+      if (typeof mUI !== 'undefined' && mUI.notify) { mUI.notify(msg); } else { alert(msg); }
+    }
+    function removeFromCart(itemId) {
+      let cart = getCart();
+      cart = cart.filter(i => i.id !== itemId);
+      saveCart(cart);
+      renderCartPage();
+    }
+    function updateCartCount() {
+      const cart = getCart();
+      const total = cart.reduce((sum, i) => sum + (i.quantity || 0), 0);
+      const el = document.getElementById('cart-count');
+      const elMobile = document.getElementById('cart-count-mobile');
+      if (el) el.textContent = total;
+      if (elMobile) elMobile.textContent = total;
+    }
+    function renderCartPage() {
+      const cart = getCart();
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total');
+      if (!container || !totalEl) return;
+      container.innerHTML = '';
+      if (cart.length === 0) {
+        container.innerHTML = '<p>Your cart is empty.</p>';
+        totalEl.textContent = '0.00';
+        return;
+      }
+      let total = 0;
+      cart.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center justify-between border-b py-2';
+        row.innerHTML = `
+          <span>${item.name} (x${item.quantity})</span>
+          <div>
+            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+            <button onclick="removeFromCart('${item.id}')" class='ml-4 text-red-500 hover:text-red-700'>Remove</button>
+          </div>
+        `;
+        container.appendChild(row);
+        total += item.price * item.quantity;
+      });
+      totalEl.textContent = total.toFixed(2);
+    }
+    function proceedToCheckout() {
+      if (getCart().length > 0) { window.location.href = './checkout.html'; } else { alert('Your cart is empty.'); }
+    }
+    // PayPal mock (in checkout page we simulate)
+    function mockPayPalPayment(amount, onSuccess) {
+      // simple delay to mimic processing
+      const btn = document.getElementById('paypal-button');
+      if (btn) { btn.disabled = true; btn.textContent = 'Processing...'; }
+      setTimeout(() => {
+        if (typeof onSuccess === 'function') onSuccess();
+      }, 1200);
+    }
+    // Init on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount();
+      if (document.getElementById('cart-items-container')) {
+        renderCartPage();
+      }
+      // mobile menu
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      // initialize Swiper carousels
+      if (typeof Swiper !== 'undefined') {
+        const swp = new Swiper('.swiper-container', {
+          loop: true,
+          pagination: { el: '.swiper-pagination', clickable: true },
+          autoplay: { delay: 3500 },
+        });
+      }
+    });
+  </script>
+  <!-- End of Global Script -->
+</body>
+</html>
