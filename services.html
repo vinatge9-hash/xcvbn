@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Niyantri Dog Care | Services</title>
+  <meta name='description' content='Professional dog grooming and care services in Jubilee Hills, Hyderabad.' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css' />
+  <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap' rel='stylesheet'>
+  <style>.custom-font { font-family: 'Inter', system-ui, -apple-system, Arial; }</style>
+</head>
+<body class='min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-blue-50 text-gray-800 custom-font'>
+  <!-- Shared Header (identical across pages) -->
+  <header class='bg-white/70 backdrop-blur-md sticky top-0 z-50 shadow-md'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div class='flex items-center justify-between h-16'>
+        <div class='flex items-center'>
+          <a href='index.html' class='flex items-center space-x-2'>
+            <svg width='28' height='28' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M4 14s3-7 8-7 8 7 8 7-3 7-8 7-8-7-8-7z' stroke='#f59e0b' stroke-width='2' fill='none'/>
+              <circle cx='12' cy='13' r='3' fill='#3b82f6'/>
+            </svg>
+            <span class='text-xl font-semibold'>Niyantri Dog Care</span>
+          </a>
+        </div>
+        <nav class='hidden md:flex space-x-6'>
+          <a href='index.html' class='hover:text-orange-600'>Home</a>
+          <a href='services.html' class='hover:text-orange-600'>Services</a>
+          <a href='cart.html' id='nav-cart' class='hover:text-orange-600'>Cart (<span id='cart-count'>0</span>)</a>
+          <a href='about.html' class='hover:text-orange-600'>About</a>
+          <a href='contact.html' class='hover:text-orange-600'>Contact</a>
+        </nav>
+        <div class='md:hidden'>
+          <button id='mobileMenuBtn' class='p-2 rounded-md bg-yellow-100 hover:bg-yellow-200'>
+            <svg width='20' height='20' viewBox='0 0 20 20' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M2 6h16v2H2V6zm0 4h16v2H2v-2zm0 6h16v-2H2v2z'/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id='mobileMenu' class='hidden md:hidden bg-white/90 border-t border-gray-200'>
+      <a href='index.html' class='block px-4 py-2'>Home</a>
+      <a href='services.html' class='block px-4 py-2'>Services</a>
+      <a href='cart.html' class='block px-4 py-2'>Cart (<span id='cart-count-mobile'>0</span>)</a>
+      <a href='about.html' class='block px-4 py-2'>About</a>
+      <a href='contact.html' class='block px-4 py-2'>Contact</a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class='pt-8 pb-14'>
+    <section class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <h1 class='text-3xl font-bold mb-4'>Our Services</h1>
+      <p class='text-gray-700 mb-6'>Explore our comprehensive catalog designed for every dog's needs. Prices range from ₹299 to ₹2499.</p>
+      <div class='grid md:grid-cols-2 gap-6'>
+        <div class='flex items-center p-4 bg-white/70 backdrop-blur-md rounded-xl shadow-md'>
+          <div class='w-12 h-12 rounded-full bg-yellow-200 flex items-center justify-center mr-4'>🛁</div>
+          <div>
+            <h3 class='font-semibold'>Bath & Basic Groom</h3>
+            <p class='text-sm text-gray-600'>Gentle cleansing, drying, and light trimming.</p>
+            <div class='mt-2'>
+              <span class='font-semibold'>₹299</span>
+              <button onclick="addToCart('svc-bath','Bath & Basic Groom',299)" class='ml-4 px-3 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class='flex items-center p-4 bg-white/70 backdrop-blur-md rounded-xl shadow-md'>
+          <div class='w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mr-4'>🧼</div>
+          <div>
+            <h3 class='font-semibold'>Deluxe Groom</h3>
+            <p class='text-sm text-gray-600'>Precision styling with premium cuts.</p>
+            <div class='mt-2'>
+              <span class='font-semibold'>₹799</span>
+              <button onclick="addToCart('svc-deluxe','Deluxe Groom',799)" class='ml-4 px-3 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class='flex items-center p-4 bg-white/70 backdrop-blur-md rounded-xl shadow-md'>
+          <div class='w-12 h-12 rounded-full bg-pink-200 flex items-center justify-center mr-4'>💆</div>
+          <div>
+            <h3 class='font-semibold'>Spa & Relax</h3>
+            <p class='text-sm text-gray-600'>Hydro-massage and aromatherapy for pups.</p>
+            <div class='mt-2'>
+              <span class='font-semibold'>₹1499</span>
+              <button onclick="addToCart('svc-spa','Spa & Relax',1499)" class='ml-4 px-3 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class='flex items-center p-4 bg-white/70 backdrop-blur-md rounded-xl shadow-md'>
+          <div class='w-12 h-12 rounded-full bg-green-200 flex items-center justify-center mr-4'>🩺</div>
+          <div>
+            <h3 class='font-semibold'>Health & Check</h3>
+            <p class='text-sm text-gray-600'>Wellness screening and preventive care.</p>
+            <div class='mt-2'>
+              <span class='font-semibold'>₹999</span>
+              <button onclick="addToCart('svc-health','Health & Check',999)" class='ml-4 px-3 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition'>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class='bg-gray-900 text-white mt-12'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid md:grid-cols-3 gap-8'>
+      <div>
+        <h4 class='font-semibold mb-2'>Niyantri Dog Care</h4>
+        <p class='text-sm text-gray-300'>Premium dog grooming and care in Jubilee Hills, Hyderabad.</p>
+      </div>
+      <div>
+        <h4 class='font-semibold mb-2'>Locations</h4>
+        <p class='text-sm text-gray-300'>Jubilee Hills, Hyderabad</p>
+      </div>
+      <div>
+        <h4 class='font-semibold mb-2'>Contact</h4>
+        <p class='text-sm text-gray-300'>Email: care@niyantri.dog</p>
+      </div>
+    </div>
+    <div class='bg-black/40 text-center py-4'>
+      <span class='text-sm text-gray-300'>&copy; 2025 Niyantri Dog Care</span>
+    </div>
+  </footer>
+
+  <script>
+    // Reuse shared cart JS from index.html
+    function getCart() { try { return JSON.parse(localStorage.getItem('shoppingCart')) || []; } catch(e) { return []; } }
+    function saveCart(cart) { localStorage.setItem('shoppingCart', JSON.stringify(cart)); updateCartCount(); }
+    function addToCart(itemId, itemName, itemPrice) { const cart = getCart(); const existing = cart.find(i => i.id === itemId); if (existing) { existing.quantity += 1; } else { cart.push({ id: itemId, name: itemName, price: Number(itemPrice), quantity: 1 }); } saveCart(cart); alert(itemName + ' added to cart.'); }
+    function updateCartCount() { const cart = getCart(); const total = cart.reduce((sum, i) => sum + (i.quantity || 0), 0); const el = document.getElementById('cart-count'); if (el) el.textContent = total; const elMobile = document.getElementById('cart-count-mobile'); if (elMobile) elMobile.textContent = total; }
+    function renderCartPage() {
+      const cart = getCart();
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total');
+      if (!container || !totalEl) return; container.innerHTML = '';
+      if (cart.length === 0) { container.innerHTML = '<p>Your cart is empty.</p>'; totalEl.textContent = '0.00'; return; }
+      let total = 0; cart.forEach(item => {
+        const row = document.createElement('div'); row.className = 'flex items-center justify-between border-b py-2';
+        row.innerHTML = `
+          <span>${item.name} (x${item.quantity})</span>
+          <div>
+            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+            <button onclick="removeFromCart('${item.id}')" class='ml-4 text-red-500 hover:text-red-700'>Remove</button>
+          </div>
+        `; container.appendChild(row); total += item.price * item.quantity;
+      }); totalEl.textContent = total.toFixed(2);
+    }
+    function removeFromCart(itemId) {
+      let cart = getCart(); cart = cart.filter(i => i.id !== itemId); saveCart(cart); renderCartPage();
+    }
+    function proceedToCheckout() { if (getCart().length > 0) { window.location.href = './checkout.html'; } else { alert('Your cart is empty.'); } }
+    function mockPayPalPayment(amount, onSuccess) { const btn = document.getElementById('paypal-button'); if (btn) { btn.disabled = true; btn.textContent = 'Processing...'; } setTimeout(() => { if (typeof onSuccess === 'function') onSuccess(); }, 1200); }
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCartCount(); if (document.getElementById('cart-items-container')) { renderCartPage(); }
+      const mobileBtn = document.getElementById('mobileMenuBtn'); const mobileMenu = document.getElementById('mobileMenu'); if (mobileBtn && mobileMenu) { mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      if (typeof Swiper !== 'undefined') { new Swiper('.swiper-container', { loop: true, pagination: { el: '.swiper-pagination', clickable: true }, autoplay: { delay: 3500 } }); }
+    });
+  </script>
+</body>
+</html>
